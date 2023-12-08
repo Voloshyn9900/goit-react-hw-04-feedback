@@ -8,6 +8,7 @@ import {
 export const FeedbackOptions = ({options, onLeaveFeedback }) => {
   const categories = Object.keys(options);
 
+  
   return (
     <ButtonList>
       {categories.map(category => (
