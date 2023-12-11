@@ -1,14 +1,8 @@
-import {
-  Button,
-  Li,
-  ButtonList,
-} from '../Feedback.styled';
+import { Button, Li, ButtonList } from '../Feedback.styled';
 
-
-export const FeedbackOptions = ({options, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const categories = Object.keys(options);
 
-  
   return (
     <ButtonList>
       {categories.map(category => (

@@ -30,10 +30,6 @@ export const Button = styled.button`
 
 export const FeedbackBlock = styled.div`
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  /* justify-content: center; Выравниваем по вертикали по центру */
-  /* align-items: center;  */
 `;
 
 export const ButtonList = styled.ul`

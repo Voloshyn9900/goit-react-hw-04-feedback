@@ -4,7 +4,11 @@ import {
   StatisticsList,
 } from '../Feedback.styled';
 
-export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+export const Statistics = ({
+  feedback: { good, neutral, bad },
+  totalFeedback,
+  positivePercentage,
+}) => {
   return (
     <>
       <StatisticsList>
@@ -18,12 +22,12 @@ export const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
           <StatisticsSpan>Bad {bad}</StatisticsSpan>
         </Li>
         <Li>
-          <StatisticsSpan>Total {total}</StatisticsSpan>
+          <StatisticsSpan>Total {totalFeedback()}</StatisticsSpan>
         </Li>
         <Li>
           <StatisticsSpan>
-            {positivePercentage > 0
-              ? `Positive feedback ${positivePercentage}%`
+            {positivePercentage() > 0
+              ? `Positive feedback ${positivePercentage()}%`
               : `Positive statistics is not available`}
           </StatisticsSpan>
         </Li>
